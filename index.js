@@ -1,4 +1,4 @@
-import i18Obj from 'translate.js';
+import i18Obj from './translate.js';
 
 let lang = "en";
 let theme = "dark";
@@ -99,15 +99,13 @@ const ru = document.querySelector(".ru");
 const langContainer = document.querySelector(".lang");
 
 langContainer.addEventListener("click", (e) => {
-
-    if (e.target.classList.contains("ru")) {
         e.preventDefault();
+    if (e.target.classList.contains("ru")) {
         changeActiveClass(langContainer, "lang-active", e);
         lang = "ru";
         getTranslate(lang);
     } 
     else if (e.target.classList.contains("en")) {
-        e.preventDefault();
         changeActiveClass(langContainer, "lang-active", e);
         lang = "en";
         getTranslate(lang);
